@@ -10,6 +10,16 @@ header {
   left: 0px;
   padding: 30px 0;
   z-index: 99;
+  background: transparent;
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
+}
+
+header.on {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 header .Inner {
   display: flex;
