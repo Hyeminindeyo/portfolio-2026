@@ -1,3 +1,5 @@
+/* PC 스타일 */
+
 .Inner {
   max-width: 1200px;
   margin: 0 auto;
@@ -38,8 +40,17 @@ header ul li {
   width: 100%;
 }
 header ul li a {
-  display: block;
-  text-align: right;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+header ul li a:hover {
+  color: #7292d2;
+  transition: 0.3s;
 }
 main .section1 {
   width: 100%;
@@ -66,6 +77,14 @@ main .section2 {
   /*background:
     linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
     url("../images/sec2Bg.jpg") right 0 no-repeat;*/
+}
+
+main .section2 .Inner {
+  height: 100vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 main h2 {
@@ -109,7 +128,11 @@ main .section3 {
   height: 100vh;
 }
 main .section3 .Inner {
-  padding: 100px 0 0 0;
+  height: 100vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 main .section3 button.moreBtn {
@@ -180,4 +203,54 @@ main .section4 p {
 
 main .section4 p b {
   font-weight: bold;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width: 1200px) {
+  .Inner {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Inner {
+    padding: 0 5%;
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1.Logo {
+    font-size: 18px;
+  }
+
+  header ul li a {
+    justify-content: center;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  header .Inner {
+    display: block;
+    padding: 0px;
+  }
+  header h1.Logo {
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  header .menu li:nth-child(2) {
+    border: 1px solid #ddd;
+    border-top: none;
+    border-bottom: none;
+  }
 }
