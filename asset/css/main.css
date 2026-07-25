@@ -82,7 +82,6 @@ main .section2 {
 
 main .section2 .Inner {
   height: 100vh;
-  padding: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -96,7 +95,7 @@ main h2 {
 
 main .section2 .careerBoxWrap {
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 1fr 2fr;
   gap: 80px;
 }
 
@@ -130,7 +129,7 @@ main .section3 {
 }
 main .section3 .Inner {
   height: 100vh;
-  padding: 0px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,7 +185,7 @@ main .section4 {
 
 main .section4 .Inner {
   height: 100vh;
-  padding: 0px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -212,21 +211,25 @@ main .section4 p b {
 
 @media (max-width: 1200px) {
   .Inner {
+    padding: 0 5%;
     max-width: 1024px;
   }
 
   main .section2,
   main .section3,
   main .section4 {
-    display: none;
+    padding: 50px 0 0 0;
+    height: 100%;
+  }
+  main .section2 .Inner,
+  main .section3 .Inner,
+  main .section4 .Inner {
+    display: block;
+    height: 100%;
   }
 }
 
 @media (max-width: 1024px) {
-  .Inner {
-    padding: 0 5%;
-    max-width: 1024px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -246,10 +249,17 @@ main .section4 p b {
     height: auto;
   }
 
-  main .section1 {
-    .slogan {
-      padding: 200px 0;
-    }
+  main .section1 .slogan {
+    padding: 200px 0;
+  }
+
+  main .section2 .careerBoxWrap {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  main .section3 .workList {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -272,5 +282,31 @@ main .section4 p b {
     border: 1px solid #ddd;
     border-top: none;
     border-bottom: none;
+  }
+
+  main .section2 .Inner,
+  main .section3 .Inner,
+  main .section4 .Inner {
+    display: block;
+  }
+
+  main .section2 .careerBoxWrap {
+    display: block;
+  }
+
+  main .section3 .workList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  main .section4 {
+    padding-bottom: 50px;
+  }
+
+  main .section4 h3 {
+    font-size: 20px;
+  }
+
+  main .section4 p {
+    font-size: 15px;
   }
 }
