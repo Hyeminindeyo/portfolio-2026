@@ -46,11 +46,21 @@ header ul li a {
   align-items: center;
   justify-content: flex-end;
   height: 100%;
+  transition: color 0.3s;
 }
 
 header ul li a:hover {
   color: #7292d2;
   transition: 0.3s;
+}
+
+main .section2 .Inner,
+main .section3 .Inner,
+main .section4 .Inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 main .section1 {
   width: 100%;
@@ -72,19 +82,12 @@ main .section1 .slogan p {
 }
 main .section2 {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 100px 0 0;
 
   /*background:
     linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
     url("../images/sec2Bg.jpg") right 0 no-repeat;*/
-}
-
-main .section2 .Inner {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 main h2 {
@@ -127,16 +130,9 @@ main .section3 {
   width: 100%;
   height: 100vh;
 }
-main .section3 .Inner {
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 main .section3 button.moreBtn {
-  display: Block;
+  display: block;
   font-weight: bold;
   color: #fff;
   background: #868e96;
@@ -170,25 +166,22 @@ main .section3 .workList article a {
   border-radius: 10px;
   text-align: center;
   border: 1px solid #aeaeae;
+  transition:
+    color 0.3s,
+    background 0.3s;
 }
 
 main .section3 .workList article a:hover {
   color: #fff;
   background: #aeaeae;
-  transition: 0.3s;
+  transition:
+    color 0.3s,
+    background 0.3s;
 }
 
 main .section4 {
   width: 100%;
   height: 100vh;
-}
-
-main .section4 .Inner {
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 main .section4 h3 {
@@ -219,7 +212,7 @@ main .section4 p b {
   main .section3,
   main .section4 {
     padding: 50px 0 0 0;
-    height: 100%;
+    height: auto;
   }
   main .section2 .Inner,
   main .section3 .Inner,
@@ -227,9 +220,6 @@ main .section4 p b {
     display: block;
     height: 100%;
   }
-}
-
-@media (max-width: 1024px) {
 }
 
 @media (max-width: 768px) {

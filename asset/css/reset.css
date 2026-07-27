@@ -1,6 +1,8 @@
 /* Reset ********************************************************************** */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
-
+* {
+  box-sizing: border-box;
+}
 html {
   margin: 0;
   padding: 0;
