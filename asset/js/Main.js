@@ -7,3 +7,19 @@ window.addEventListener("scroll", () => {
     header.classList.remove("on");
   }
 });
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const showElements = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("on");
+    }
+  });
+};
+
+const observer = new IntersectionObserver(showElements);
+
+revealElements.forEach((element) => {
+  observer.observe(element);
+});
